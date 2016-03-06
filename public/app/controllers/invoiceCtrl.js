@@ -1,14 +1,14 @@
 // Posting data to api 
-angular.module('invoiceCtrl', ['invoiceService'])
+angular.module('invoiceCtrl', ['taskService'])
 
 // newInvoiceCtrl
 
-.controller('invoiceController',  function(Invoice){
+.controller('invoiceController',  function(Task){
 
 var vm = this;
 
 
-Invoice.all()
+Task.all()
 .success(function(data){
 
     //scope.submit = function(formData) {

@@ -1,23 +1,17 @@
 <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Task Details</div>
- 
+  <div class="panel-heading">Entry - {{customTaskData.date| date:dateFormat}}</div>
 
   <!-- List group -->
   <ul class="list-group">
-    <li class="list-group-item">Task name: {{customInvoiceData.taskName}}</li>
-    <li class="list-group-item">Task Description: {{customInvoiceData.taskDescription}}</li>
-    <li class="list-group-item">Platform: {{customInvoiceData.platform}}</li>
-    <li class="list-group-item">Client name: {{customInvoiceData.clientName}}</li>
-    <li class="list-group-item">URL: {{customInvoiceData.url}}</li>
-    <li class="list-group-item">Work Done: {{customInvoiceData.workDone}}</li>
-    <li class="list-group-item">Hours: {{customInvoiceData.hours}}</li>
-    <li ng-show="{{ if (customInvoiceData.assignedBy)}}"class="list-group-item">Assigned by:  {{customInvoiceData.assignedBy}}</li>
-    <li class="list-group-item">Date Assigned: {{customInvoiceData.dateAssigned| date:dateFormat}}</li>
-    <li ng-show="{{ if (customInvoiceData.comments)}}" class="list-group-item">Comments: {{customInvoiceData.comments}}</li>
+   <li class="list-group-item">Client name: {{customTaskData.clientName}}</li>
+    <li class="list-group-item">Platform: {{customTaskData.platform}}</li>
+    <li class="list-group-item">URL: {{customTaskData.url}}</li>
+    <li class="list-group-item">Work Done: {{customTaskData.workDone}}</li>
+    <li class="list-group-item">Date: {{customTaskData.date| date:dateFormat}}</li>
+    <li ng-show="{{ if (customTaskData.comments)}}" class="list-group-item">Comments: {{customTaskData.comments}}</li>
 
   </ul>
 
-  <div class="panel-footer">Date Completed: {{customInvoiceData.dateCompleted| date:dateFormat}}</div>
 </div>
 

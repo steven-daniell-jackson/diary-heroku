@@ -1,9 +1,9 @@
 // Dependacy added for the Invoice Factory
 
-var app = angular.module('SearchCtrlMod',['invoiceService']);
+var app = angular.module('SearchCtrlMod',['taskService']);
 
 // Add the Factory name to the controller
-app.controller('SearchCtrl', function($scope, Invoice, $routeParams, $window) {
+app.controller('SearchCtrl', function($scope, Task, $routeParams, $window) {
 
    $scope.User = {};
    $scope.errorMessage = '';
@@ -18,9 +18,9 @@ $scope.reloadRoute = function() {
 }
 
 // Access factory and assign the returned data
-Invoice.all()
+Task.all()
 .success(function(data) {
-    $scope.invoices = data;
+    $scope.entries = data;
 $scope.preloader = false;
 
 

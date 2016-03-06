@@ -35,9 +35,9 @@ app.config(['$routeProvider',
             templateUrl: 'app/views/login.html',
             controller: 'LoginCtrl'
         })
-        .when('/add-new-invoice', {
-            templateUrl: 'app/views/add-new-invoice.html',
-            controller: 'addNewInvoiceCtrl'
+        .when('/new-entry', {
+            templateUrl: 'app/views/add-new-task.html',
+            controller: 'addNewTaskCtrl'
         })
         .when('/archive/2016', {
             templateUrl: 'app/views/archive2016.html',

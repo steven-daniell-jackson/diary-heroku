@@ -1,4 +1,4 @@
-var app = angular.module('LoginCtrlModule',['loginService']);
+var app = angular.module('LoginCtrlModule',['taskService']);
 
 app.controller('LoginCtrl', ['$scope','Login',  'Auth', function($scope, Login, Auth) {
   

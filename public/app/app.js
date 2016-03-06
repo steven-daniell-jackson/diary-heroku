@@ -1,3 +1,3 @@
-var app = angular.module('invoiceApp',['appRoutes', 'mainCtrlModule', 'LoginCtrlModule','LatestWorkCtrlModule','addNewInvoiceModule','invoiceService', 'loginService','ArchiveCtrlMod','SearchCtrlMod']);
+var app = angular.module('invoiceApp',['appRoutes', 'mainCtrlModule', 'LoginCtrlModule','LatestWorkCtrlModule','addNewTaskeModule','taskService', 'loginService','ArchiveCtrlMod','SearchCtrlMod']);
 
   

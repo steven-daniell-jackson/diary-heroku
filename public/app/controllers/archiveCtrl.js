@@ -1,9 +1,9 @@
 // Dependacy added for the Invoice Factory
 
-var app = angular.module('ArchiveCtrlMod',['invoiceService']);
+var app = angular.module('ArchiveCtrlMod',['taskService']);
 
 // Add the Factory name to the controller
-app.controller('ArchiveCtrl', function($scope, Invoice, $routeParams, $location ) {
+app.controller('ArchiveCtrl', function($scope, Task, $routeParams, $location ) {
 
    $scope.User = {};
    $scope.errorMessage = '';
@@ -24,9 +24,9 @@ $scope.filterMonth = $scope.location.substr(14);
 
 
 // Access factory and assign the returned data
-Invoice.all()
+Task.all()
 .success(function(data) {
-    $scope.invoices = data;
+    $scope.entries = data;
     $scope.preloader = false;
 
 // Self activating function to get months
@@ -35,16 +35,16 @@ $scope.months = [];
 (function () {
 
 // Loop through the invoice JSON object returned from api
-	for (x in $scope.invoices) {
+	for (x in $scope.entries) {
 
 // If the year matches the year in the url. Find the months
-     if ($scope.invoices[x].yearFilter == $scope.year){
+     if ($scope.entries[x].yearFilter == $scope.year){
     // Check to see if month already exists
 
-    // console.log($scope.invoices[x])
-    if ($scope.months.indexOf($scope.invoices[x].monthFilter) == -1) {
+    // console.log($scope.entries[x])
+    if ($scope.months.indexOf($scope.entries[x].monthFilter) == -1) {
 
-        $scope.months.push($scope.invoices[x].monthFilter);
+        $scope.months.push($scope.entries[x].monthFilter);
 
     }
 }
