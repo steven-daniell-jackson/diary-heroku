@@ -14,7 +14,7 @@
 
 <div ng-repeat="entry in entries | filter:clientNameFilter">
 
-<div ng-if="invoice.clientName.indexOf(clientNameFilter) > -1">
+<div ng-if="entry.clientName.indexOf(clientNameFilter) > -1">
 <taskpanel custom-task-data="entry"  class="col-md-4 layout-fix"></taskpanel>
 </div>
 
