@@ -4,12 +4,12 @@
 
   <!-- List group -->
   <ul class="list-group">
-   <li class="list-group-item">Client name: {{customTaskData.clientName}}</li>
-    <li class="list-group-item">Platform: {{customTaskData.platform}}</li>
-    <li class="list-group-item">URL: {{customTaskData.url}}</li>
-    <li class="list-group-item">Work Done: {{customTaskData.workDone}}</li>
-    <li class="list-group-item">Date: {{customTaskData.date| date:dateFormat}}</li>
-    <li ng-show="{{ if (customTaskData.comments)}}" class="list-group-item">Comments: {{customTaskData.comments}}</li>
+   <li class="list-group-item"><strong>Client name:</strong> {{customTaskData.clientName}}</li>
+    <li class="list-group-item"><strong>Platform:</strong> {{customTaskData.platform}}</li>
+    <li class="list-group-item"><strong>URL:</strong> {{customTaskData.url}}</li>
+    <li class="list-group-item"><strong>Work Done:</strong> {{customTaskData.workDone}}</li>
+    <li class="list-group-item"><strong>Date:</strong> {{customTaskData.date| date:dateFormat}}</li>
+    <li ng-show="{{ if (customTaskData.comments)}}" class="list-group-item"><strong>Comments:</strong> {{customTaskData.comments}}</li>
 
   </ul>
 
