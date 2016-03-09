@@ -9,7 +9,7 @@
     <li class="list-group-item"><strong>URL:</strong> {{customTaskData.url}}</li>
     <li class="list-group-item"><strong>Work Done:</strong> {{customTaskData.workDone}}</li>
     <li class="list-group-item"><strong>Date:</strong> {{customTaskData.date| date:dateFormat}}</li>
-    <li ng-show="{{ if (customTaskData.comments)}}" class="list-group-item"><strong>Comments:</strong> {{customTaskData.comments}}</li>
+    <li ng-show="customTaskData.comments" class="list-group-item"><strong>Comments:</strong> {{customTaskData.comments}}</li>
 
   </ul>
 
